@@ -5,6 +5,6 @@ My NeoVim config
 If you ever want to use my config:
 - backup your current config
 - clone this repository into $XDG_CONFIG_HOME/nvim/ directory
-- optionally delte .git directory
-- open NeoVim for Lazy.nvim to install plugins
+- optionally delete .git directory
+- open NeoVim. Lazy.nvim will install all plugins
 - reopening NeoVim is recommened
