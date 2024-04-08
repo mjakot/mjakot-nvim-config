@@ -1,8 +1,8 @@
 # mjakot-nvim-config
-My NeoVim config
+My [NeoVim](https://github.com/neovim/neovim) config
 
 # Usage
-If you ever want to use my config:
+If you ever want to use this config:
 - backup your current config
 - clone this repository into $XDG_CONFIG_HOME/nvim/ directory
 - optionally delete .git directory
