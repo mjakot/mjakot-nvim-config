@@ -15,3 +15,5 @@ vim.cmd([[set shiftwidth=0]])
 
 vim.cmd([[set cursorline]])
 vim.cmd([[set cursorlineopt=number]])
+
+vim.cmd([[set spell spelllang=en_us]])
