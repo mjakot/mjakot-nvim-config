@@ -5,6 +5,8 @@ require("mjakot.lspconfig")
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+vim.opt.shortmess:append({ I = true })
+
 vim.cmd([[set guicursor=i:blinkoff200-blinkon200,i:ver25]])
 
 vim.cmd([[set tabstop=2]])
