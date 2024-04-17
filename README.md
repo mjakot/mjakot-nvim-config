@@ -1,5 +1,5 @@
 # mjakot-nvim-config
-My [NeoVim](https://github.com/neovim/neovim) config
+My [NeoVim](https://github.com/neovim/neovim) config  
 Based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
 
 # Installation
