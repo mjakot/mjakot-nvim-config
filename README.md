@@ -1,3 +1,6 @@
+# Deprecated
+This was my first attempt at configuring NeoVim.
+
 # mjakot-nvim-config
 My [NeoVim](https://github.com/neovim/neovim) config
 
