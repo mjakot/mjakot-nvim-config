@@ -28,7 +28,6 @@ o.splitbelow = true
 o.inccommand = 'split'
 
 o.cursorline = true
-o.cursorlineopt = 'number'
 
 o.scrolloff = 10
 

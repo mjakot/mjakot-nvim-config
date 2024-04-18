@@ -19,23 +19,23 @@ local M = {
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('mjakot-lsp-attach', { clear = true }),
       callback = function(event)
-        nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinitions')
-        nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-        nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-        nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-        nmap('<leader>fs', require('telescope.builtin').lsp_document_symbols, '[F]ind [S]ymbols')
-        nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-        nmap('<leader>fd', require('telescope.builtin').lsp_type_definitions, '[F]ind [D]efinition')
-        nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[N]ame')
-        nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-        nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+        nmap('gd', require('telescope.builtin').lsp_definitions, 'LSP: [G]oto [D]efinitions')
+        nmap('gr', require('telescope.builtin').lsp_references, 'LSP: [G]oto [R]eferences')
+        nmap('gI', require('telescope.builtin').lsp_implementations, 'LSP: [G]oto [I]mplementation')
+        nmap('gD', vim.lsp.buf.declaration, 'LSP: [G]oto [D]eclaration')
+        nmap('<leader>fs', require('telescope.builtin').lsp_document_symbols, 'LSP: [F]ind [S]ymbols')
+        nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'LSP: [W]orkspace [S]ymbols')
+        nmap('<leader>fd', require('telescope.builtin').lsp_type_definitions, 'LSP: [F]ind [D]efinition')
+        nmap('<leader>rn', vim.lsp.buf.rename, 'LSP: [R]e[N]ame')
+        nmap('<leader>ca', vim.lsp.buf.code_action, 'LSP: [C]ode [A]ction')
+        nmap('K', vim.lsp.buf.hover, 'LSP: Hover Documentation')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
 
         if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
           nmap('<leader>ih', function()
             vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
-          end, 'Toggle [I]nlay [H]ints')
+          end, 'LSP: Toggle [I]nlay [H]ints')
         end
       end,
     })

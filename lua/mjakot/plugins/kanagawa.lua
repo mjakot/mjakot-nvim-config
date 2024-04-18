@@ -6,7 +6,7 @@ local M = {
     dark = 'dragon',
   },
   init = function()
-    vim.cmd.colorscheme 'kanagawa'
+    vim.cmd.colorscheme 'kanagawa-dragon'
   end,
 }
 
