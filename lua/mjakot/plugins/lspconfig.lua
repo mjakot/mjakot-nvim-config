@@ -29,14 +29,6 @@ local M = {
         nmap('<leader>rn', vim.lsp.buf.rename, 'LSP: [R]e[N]ame')
         nmap('<leader>ca', vim.lsp.buf.code_action, 'LSP: [C]ode [A]ction')
         nmap('K', vim.lsp.buf.hover, 'LSP: Hover Documentation')
-
-        local client = vim.lsp.get_client_by_id(event.data.client_id)
-
-        if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-          nmap('<leader>th', function()
-            vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
-          end, 'LSP: [T]oggle inlay [H]ints')
-        end
       end,
     })
 
