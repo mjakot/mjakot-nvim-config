@@ -1,7 +1,6 @@
 require("utils")
 
 require("lazy").setup({
-	plreq("vim-sleuth"),
 	plreq("Comment-nvim"),
 	plreq("gitsigns"),
 	plreq("telescope"),
