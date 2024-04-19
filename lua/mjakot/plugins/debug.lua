@@ -3,10 +3,13 @@ require 'utils'
 local M = {
   'mfussenegger/nvim-dap',
   dependencies = {
-    'rcarriga/nvim-dap-ui',
     'nvim-neotest/nvim-nio',
     'williamboman/mason.nvim',
     'jay-babu/mason-nvim-dap.nvim',
+    {
+      'rcarriga/nvim-dap-ui',
+      opts = {},
+    },
   },
   config = function()
     local dap = require 'dap'
@@ -35,9 +38,7 @@ local M = {
       type = 'server',
       port = '${port}',
       executable = {
-	-- stylua: ignore start
-        command = vim.fn.stdpath('data') .. '\\mason\\bin\\codelldb.cmd',
-        -- stylua: ignore end
+        command = vim.fn.stdpath 'data' .. '/mason/bin/codelldb.cmd',
         args = { '--port', '${port}' },
         detached = false,
       },
@@ -55,61 +56,20 @@ local M = {
       dap.clear_breakpoints()
       dap.terminate()
     end, 'Debug: [X] Terminate Debugging and Clear Breakpoints')
-
-    dapui.setup {
-      icons = {
-        expanded = '▾',
-        collapsed = '▸',
-        current_frame = '*',
-      },
-      mappings = {
-        open = 'o',
-        remove = 'd',
-        edit = 'e',
-        repl = 'r',
-        toggle = 't',
-      },
-      expand_lines = true,
-      layouts = {
-        {
-          elements = {
-            'scopes',
-          },
-          size = 0.3,
-          position = 'left',
-        },
-        {
-          elements = {
-            'repl',
-            'breakpoints',
-          },
-          size = 0.3,
-          position = 'bottom',
-        },
-      },
-      floating = {
-        max_height = nil,
-        max_width = nil,
-        border = 'single',
-        mappings = {
-          close = {
-            'q',
-            '<Esc>',
-          },
-        },
-      },
-      windows = { indent = 1 },
-      render = {
-        max_type_length = nil,
-        indent = 1,
-      },
-    }
-
     nmap('<F7>', dapui.toggle, 'Debug: [F7] See last session result')
 
-    dap.listeners.after.event_initialized['dapui_config'] = dapui.open
-    dap.listeners.before.event_terminated['dapui_config'] = dapui.close
-    dap.listeners.before.event_exited['dapui_config'] = dapui.close
+    dap.listeners.before.attach.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.launch.dapui_config = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated.dapui_config = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited.dapui_config = function()
+      dapui.close()
+    end
   end,
 }
 
