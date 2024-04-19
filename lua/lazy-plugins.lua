@@ -8,7 +8,6 @@ require('lazy').setup({
   plreq 'conform',
   plreq 'cmp',
   plreq 'kanagawa',
-  plreq 'todo-comments',
   plreq 'mini',
   plreq 'treesitter',
   plreq 'indent-line',
