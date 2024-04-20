@@ -41,7 +41,7 @@ local M = {
       if vim.v.shell_error == 0 then
         builtin.find_files { cwd = root }
       else
-        builtin.live_grep()
+        builtin.find_files()
       end
     end, '[F]ind [F]iles')
 
