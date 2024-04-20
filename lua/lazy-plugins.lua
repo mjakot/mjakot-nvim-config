@@ -8,7 +8,7 @@ require('lazy').setup({
   plreq 'conform',
   plreq 'cmp',
   plreq 'kanagawa',
-  plreq 'mini',
+  plreq 'lualine',
   plreq 'treesitter',
   plreq 'indent-line',
   plreq 'vim-sleuth',

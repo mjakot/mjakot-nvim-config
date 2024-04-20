@@ -34,10 +34,16 @@ local M = {
     local builtin = require 'telescope.builtin'
 
     nmap('<leader>fh', builtin.help_tags, '[F]ind [H]help')
-    nmap('<leader>fw', builtin.grep_string, '[F]ind [W]ord')
     nmap('<leader>fd', builtin.diagnostics, '[F]ind [D]iagnostics')
-    nmap('<leader>ff', builtin.oldfiles, '[F]ind [F]iles')
-    nmap('<leader><leader>', builtin.buffers, '[ ] Find existing buffers')
+    nmap('<leader>ff', function()
+      local root = string.gsub(vim.fn.system 'git rev-parse --show-toplevel', '\n', '')
+
+      if vim.v.shell_error == 0 then
+        builtin.find_files { cwd = root }
+      else
+        builtin.live_grep()
+      end
+    end, '[F]ind [F]iles')
 
     nmap('<leader>/', function()
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {

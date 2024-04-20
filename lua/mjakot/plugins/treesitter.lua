@@ -10,6 +10,7 @@ local M = {
       'vim',
       'vimdoc',
       'cpp',
+      'python',
     },
     auto_install = true,
     highlight = {

@@ -33,8 +33,4 @@ o.scrolloff = 10
 
 o.hlsearch = true
 
-o.tabstop = 2
-o.softtabstop = -1
-o.shiftwidth = 0
-
 o.guicursor = 'i:blinkon700-blinkwait500,i:ver25'

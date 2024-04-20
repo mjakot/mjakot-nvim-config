@@ -7,6 +7,7 @@ local M = {
       delete = { text = '_' },
       topdelete = { text = '‾' },
       changedelete = { text = '~' },
+      untracked = { text = '┆' },
     },
   },
 }

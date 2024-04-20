@@ -18,7 +18,7 @@ local M = {
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('mjakot-lsp-attach', { clear = true }),
-      callback = function(event)
+      callback = function(_)
         nmap('gd', require('telescope.builtin').lsp_definitions, 'LSP: [G]oto [D]efinitions')
         nmap('gr', require('telescope.builtin').lsp_references, 'LSP: [G]oto [R]eferences')
         nmap('gI', require('telescope.builtin').lsp_implementations, 'LSP: [G]oto [I]mplementation')
@@ -28,7 +28,7 @@ local M = {
         nmap('<leader>fd', require('telescope.builtin').lsp_type_definitions, 'LSP: [F]ind [D]efinition')
         nmap('<leader>rn', vim.lsp.buf.rename, 'LSP: [R]e[N]ame')
         nmap('<leader>ca', vim.lsp.buf.code_action, 'LSP: [C]ode [A]ction')
-        nmap('K', vim.lsp.buf.hover, 'LSP: Hover Documentation')
+        nmap('K', vim.lsp.buf.hover, 'LSP: [ K] Hover Documentation')
       end,
     })
 
@@ -39,6 +39,7 @@ local M = {
 
     local servers = {
       clangd = {},
+      pyright = {},
       lua_ls = {
         settings = {
           Lua = {
