@@ -4,6 +4,7 @@ local M = {
     require('presence').setup {
       auto_update = true,
       main_image = 'neovim',
+      neovim_image_text = 'What the sigma',
       debounce_timeout = 10,
       enable_line_number = false,
       log_level = nil,
