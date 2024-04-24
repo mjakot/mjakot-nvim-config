@@ -1,9 +1,9 @@
 local M = {
-  'andweeb/presence.nvim'
+  'andweeb/presence.nvim',
   config = function()
-    require("presence").setup({
+    require('presence').setup {
       auto_update = true,
-      main_image = "neovim",
+      main_image = 'neovim',
       debounce_timeout = 10,
       enable_line_number = false,
       log_level = nil,
@@ -17,6 +17,9 @@ local M = {
       plugin_manager_text = nil,
       reading_text = nil,
       workspace_text = nil,
-      line_number_text = nil
-    })
-  end
+      line_number_text = nil,
+    }
+  end,
+}
+
+return { M }

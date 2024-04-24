@@ -13,6 +13,7 @@ require('lazy').setup({
   plreq 'indent-line',
   plreq 'vim-sleuth',
   plreq 'debug',
+  plreq 'presence',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},
