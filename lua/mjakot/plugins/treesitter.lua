@@ -11,6 +11,7 @@ local M = {
       'vimdoc',
       'cpp',
       'python',
+      'c_sharp',
     },
     auto_install = true,
     highlight = {
