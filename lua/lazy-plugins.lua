@@ -14,6 +14,7 @@ require('lazy').setup({
   plreq 'vim-sleuth',
   plreq 'debug',
   plreq 'presence',
+  plreq 'which-key',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},

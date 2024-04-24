@@ -3,7 +3,7 @@
 o = vim.opt
 
 nmap = function(keys, func, desc)
-  vim.keymap.set('n', keys, func, { desc = 'Custom normal mode remap: ' .. desc })
+  vim.keymap.set('n', keys, func, { desc = desc })
 end
 
 plreq = function(plugin)
