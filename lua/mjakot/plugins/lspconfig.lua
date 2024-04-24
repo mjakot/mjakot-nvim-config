@@ -40,6 +40,7 @@ local M = {
     local servers = {
       clangd = {},
       pyright = {},
+      omnisharp_mono = {},
       lua_ls = {
         settings = {
           Lua = {
