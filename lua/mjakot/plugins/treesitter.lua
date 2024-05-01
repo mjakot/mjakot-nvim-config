@@ -13,7 +13,6 @@ local M = {
       'python',
       'c_sharp',
     },
-    auto_install = true,
     highlight = {
       enable = true,
     },
