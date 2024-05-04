@@ -1,6 +1,6 @@
 # List of all custom key remaps for this configuration 
 
-### - \<leader> = space
+- ### \<leader> = space
 
 ## List by usage
 
@@ -59,7 +59,7 @@
 - \<Esc> = Clear highlight on search
 - \<C-C> = Clear highlight on search
 - \<leader>fr = [F]o[R]mat buffer 
- 
+<br/>
 
 ## List by plugin/file name 
 
