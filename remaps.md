@@ -8,17 +8,14 @@
 
 - \<Esc> = Clear highlight on search
 - \<C-C> = Clear highlight on search
-
 - \<leader>nd = Go to [N]ext [D]iagnostic message
 - \<leader>pd = Go to [P]revious [D]iagnostic message
 - \<leader>ed = Show [E]rror message [D]iagnostic
 - \<leader>qd = Open [Q]uickfix list [D]iagnostic
-
 - \<C-h> = Move focus to the left window
 - \<C-l> = Move focus to the right window
 - \<C-j> = Move focus to the lower window
 - \<C-k> = Move focus to the upper window
-
 - \<C-d> = Scroll [D]own half page and center cursor
 - \<C-u> = Scroll [U]p half page and center cursor
 
