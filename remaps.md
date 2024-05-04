@@ -1,6 +1,6 @@
 # List of all custom key remaps for this configuration 
 
-> \<leader> = space
+- \<leader> = space
 
 ## List by plugin/file name 
 
