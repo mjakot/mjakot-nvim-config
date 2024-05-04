@@ -24,11 +24,11 @@ local M = {
         nmap('gI', require('telescope.builtin').lsp_implementations, 'LSP: [G]oto [I]mplementation')
         nmap('gD', vim.lsp.buf.declaration, 'LSP: [G]oto [D]eclaration')
         nmap('<leader>fs', require('telescope.builtin').lsp_document_symbols, 'LSP: [F]ind [S]ymbols')
-        nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'LSP: [W]orkspace [S]ymbols')
+        nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'LSP: Search [W]orkspace [S]ymbols')
         nmap('<leader>fd', require('telescope.builtin').lsp_type_definitions, 'LSP: [F]ind [D]efinition')
         nmap('<leader>rn', vim.lsp.buf.rename, 'LSP: [R]e[N]ame')
         nmap('<leader>ca', vim.lsp.buf.code_action, 'LSP: [C]ode [A]ction')
-        nmap('K', vim.lsp.buf.hover, 'LSP: [ K] Hover Documentation')
+        nmap('K', vim.lsp.buf.hover, 'LSP: [K] Hover Documentation')
       end,
     })
 
